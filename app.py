@@ -32,7 +32,7 @@ model, labels = clustering(X,n_clusters,linkage)
 
 df["Cluster"] = labels
 
-if (len(features) ==2) & (df[features[0]].dtype == 'float64') & (df[features[0]].dtype == 'int64') & (df[features[1]].dtype == 'float64') & (df[features[1]].dtype == 'int64'):
+if (len(features) ==2) & (df[features[0]].dtype == 'float64') or (df[features[0]].dtype == 'int64') & (df[features[1]].dtype == 'float64') or (df[features[1]].dtype == 'int64'):
     fig, ax = plt.subplots()
     ax.scatter(
         df[features[0]],
